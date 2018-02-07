@@ -1,0 +1,194 @@
+# sets up ntp, rpcbind, Java and mapr default user with standard password mapr123
+# Write unprovisioned instances here, so that Ansible is aware of host and can uninstall
+# This stays empty unless you want to remove a node
+[unprovision]
+#10.0.0.145
+
+[common]
+node-1.demo.mapr.com
+node-2.demo.mapr.com
+node-3.demo.mapr.com
+node-4.demo.mapr.com
+node-5.demo.mapr.com
+
+[mapr-core]
+node-1.demo.mapr.com
+node-2.demo.mapr.com
+node-3.demo.mapr.com
+node-4.demo.mapr.com
+node-5.demo.mapr.com
+
+# Zookeeper
+[mapr-zookeeper]
+node-1.demo.mapr.com
+node-2.demo.mapr.com
+node-3.demo.mapr.com
+
+# Container Location DataBase
+[mapr-cldb]
+node-1.demo.mapr.com
+node-2.demo.mapr.com
+node-3.demo.mapr.com
+
+# Kafka API for MapR-Streams
+[mapr-kafka]
+node-1.demo.mapr.com
+node-2.demo.mapr.com
+node-3.demo.mapr.com
+node-4.demo.mapr.com
+node-5.demo.mapr.com
+
+# Gateway for Streams and MapR-DB
+node-5.demo.mapr.com
+
+# MapR Control System
+[mapr-mcs]
+node-1.demo.mapr.com
+node-2.demo.mapr.com
+
+# YARN resource manager
+[mapr-resourcemanager]
+node-1.demo.mapr.com
+node-2.demo.mapr.com
+
+# Job History Server, IMPORTANT: only one
+[mapr-historyserver]
+node-1.demo.mapr.com
+
+# Contains YARN Node Manager, MapReduce2 and MapR FileServer (MFS)
+[mapr-datanode]
+node-1.demo.mapr.com
+node-2.demo.mapr.com
+node-3.demo.mapr.com
+node-4.demo.mapr.com
+node-5.demo.mapr.com
+
+# MySQL, required for Hive MetaStore and Oozie, IMPORTANT: only one
+[ext-mysql]
+node-1.demo.mapr.com
+
+# Spark on YARN
+[mapr-spark-yarn]
+node-1.demo.mapr.com
+node-2.demo.mapr.com
+node-3.demo.mapr.com
+node-4.demo.mapr.com
+node-5.demo.mapr.com
+
+# Spark HistoryServer
+[mapr-spark-historyserver]
+node-1.demo.mapr.com
+
+# NFS
+[mapr-nfs]
+node-1.demo.mapr.com
+node-2.demo.mapr.com
+node-3.demo.mapr.com
+
+# MapR Fuse Posix Client Basic
+[mapr-posix-client-basic]
+node-4.demo.mapr.com
+node-5.demo.mapr.com
+
+# MapR Fuse Posix Client Platinum
+[mapr-posix-client-platinum]
+
+
+# Apache Drill
+[mapr-drill-standalone]
+node-4.demo.mapr.com
+node-5.demo.mapr.com
+
+# Apache Drill
+[mapr-drill-yarn]
+
+# Flume
+[mapr-flume]
+
+# HBase CLI
+[mapr-hbase-cli]
+node-4.demo.mapr.com
+node-5.demo.mapr.com
+
+# HBase REST and Thrift
+[mapr-hbase-thrift-rest]
+#node-5.demo.mapr.com
+
+# Hive CLI
+[mapr-hive-cli]
+node-4.demo.mapr.com
+node-5.demo.mapr.com
+
+# Hive Meta Store
+[mapr-hive-metastore]
+node-2.demo.mapr.com
+
+# Hive Server2
+[mapr-hive-server2]
+node-2.demo.mapr.com
+
+# Hive WebHCat
+[mapr-hive-webhcat]
+node-2.demo.mapr.com
+
+# HttpFS
+[mapr-httpfs]
+node-2.demo.mapr.com
+
+[mapr-hue]
+node-2.demo.mapr.com
+
+# Mahout
+[mapr-mahout]
+
+# Sqoop1
+[mapr-sqoop1]
+
+
+# Sqoop2 Server
+[mapr-sqoop2-server]
+
+
+# Sqoop2 Client
+[mapr-sqoop2-client]
+
+
+# Pig
+[mapr-pig]
+#node-2.demo.mapr.com
+#node-3.demo.mapr.com
+#node-4.demo.mapr.com
+#node-5.demo.mapr.com
+
+# Oozie
+[mapr-oozie]
+node-2.demo.mapr.com
+
+# CollectD
+[mapr-collectd:children]
+mapr-core
+
+# OpenTSDB
+[mapr-opentsdb]
+node-2.demo.mapr.com
+node-3.demo.mapr.com
+
+# Custom OpenTSDB, do NOT install on same node as mapr-opentsdb
+[mapr-opentsdb-custom]
+
+# Grafana
+[mapr-grafana]
+node-2.demo.mapr.com
+
+# FluentD
+[mapr-fluentd:children]
+mapr-core
+
+# ElasticSearch
+[mapr-elasticsearch]
+#node-4.demo.mapr.com
+#node-5.demo.mapr.com
+
+# Kibana
+[mapr-kibana]
+#node-5.demo.mapr.com

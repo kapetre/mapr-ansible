@@ -31,7 +31,7 @@ security_all: maprsasl
 mapr_security: "{{ security_all }}"
 
 # Additional information for Kerberos
-mapr_kerberos_realm: PS.MAPR.COM
+mapr_kerberos_realm: DEMO.MAPR.COM
 mapr_kerberos_local_keytabs_dir: /Users/chufe/Documents/mykeytabs
 
 # Will delete existing keys (cldb.key, maprserverticket, ssl_truststore, ssl_keystore) and generate new one: true /false
@@ -57,7 +57,7 @@ hue_ssl: true
 spyglass_elasticsearch_secure: false
 ###########################################
 
-mapr_subnets: 10.0.0.0/24
+mapr_subnets: 172.16.9.0/24
 mapr_create_user: true
 mapr_user: mapr
 mapr_group: mapr
@@ -119,7 +119,7 @@ oozie_smtp_password:
 # passwd is mapr
 mapr_passwd: $6$GzlcP5ei$E6P9QM40O6KJFLZ3wMcg3jzQBNxGXrf8yc77CbCmf0KtFSxK0mpCParhc3WVNEAm4fHKPAqyRV9rsiF6DAFlW0
 
-disks: /dev/nvme1n1,/dev/nvme2n1,/dev/nvme3n1
+disks: /dev/xvdb
 disk_storage_pool_size: 3
 
 # Third party components

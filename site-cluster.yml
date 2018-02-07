@@ -6,6 +6,9 @@
   hosts: mapr-core
   roles:
     - mapr-configure-repository
+  environment:
+    http_proxy: http://172.16.8.20:3128
+    https_proxy: http://172.16.8.20:3128
 - name: Apply common configuration to all nodes
   hosts: common
   roles:
